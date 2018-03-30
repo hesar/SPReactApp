@@ -1,9 +1,11 @@
 import * as React from 'react';
 import pnp from 'sp-pnp-js';
+import { SearchResults } from 'sp-pnp-js/lib/sharepoint/search';
 export default class Dokumenty extends React.Component<{},{}>{
     
     state = {
-        dokumenty: []
+        dokumenty: [],
+        search: []
     }
 
     getDocs = () => {
@@ -12,7 +14,8 @@ export default class Dokumenty extends React.Component<{},{}>{
     };
 
     search = () =>{
-
+        pnp.sp.search("Home")
+            .then( (r: SearchResults) => this.setState({search:r}))
     };
 
 
@@ -29,6 +32,9 @@ render():JSX.Element{
 
 <table>
     {this.state.dokumenty.map( dok => <tr><td> {dok.Title} </td></tr>)}
+</table>
+<table>
+    {this.state.search.map( search => <tr><td> {search.Title} </td></tr>)}
 </table>
 </div>
         );
