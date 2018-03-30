@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './SpfxReact.module.scss';
 import { ISpfxReactProps } from './ISpfxReactProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import Dokumenty from './Dokumenty';
 
 export default class SpfxReact extends React.Component<ISpfxReactProps, {}> {
   public render(): React.ReactElement<ISpfxReactProps> {
@@ -16,6 +17,7 @@ export default class SpfxReact extends React.Component<ISpfxReactProps, {}> {
               <a href="https://aka.ms/spfx" className={ styles.button }>
                 <span className={ styles.label }>Learn more</span>
               </a>
+              <Dokumenty />
             </div>
           </div>
         </div>

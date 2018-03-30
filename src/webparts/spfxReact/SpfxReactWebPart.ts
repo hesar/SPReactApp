@@ -11,6 +11,7 @@ import * as strings from 'SpfxReactWebPartStrings';
 import SpfxReact from './components/SpfxReact';
 import { ISpfxReactProps } from './components/ISpfxReactProps';
 
+
 export interface ISpfxReactWebPartProps {
   description: string;
 }
