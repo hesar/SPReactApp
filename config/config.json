@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spfxReact/SpfxReactWebPart.js",
+      "manifest": "./src/webparts/spfxReact/SpfxReactWebPart.manifest.json",
+      "outputPath": "./dist/spfx-react-web-part.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "SpfxReactWebPartStrings": "webparts/spfxReact/loc/{locale}.js"
+  }
+}
